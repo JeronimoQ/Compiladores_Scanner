@@ -3,11 +3,11 @@
 // source: src/main/jflex/analizador.lex
 
 //User Code
-package com.mycompany.ejercicio_lexico;
+package scaner.jflex.tarea;
 
 
 @SuppressWarnings("fallthrough")
-public class AnalizadorLexico {
+public class AnalizadorLexicoTarea {
 
   /** This character denotes the end of file. */
   public static final int YYEOF = -1;
@@ -62,7 +62,13 @@ public class AnalizadorLexico {
   private static final int [] ZZ_CMAP_BLOCKS = zzUnpackcmap_blocks();
 
   private static final String ZZ_CMAP_BLOCKS_PACKED_0 =
-    "\101\0\32\1\6\0\32\1\u0185\0";
+    "\11\0\2\1\2\0\1\1\22\0\1\2\7\0\2\3"+
+    "\4\0\1\3\14\0\1\3\11\0\1\4\1\5\2\0"+
+    "\1\6\6\0\1\7\2\0\1\10\7\0\1\3\1\0"+
+    "\1\3\3\0\1\11\1\12\1\13\1\14\1\15\1\16"+
+    "\1\17\1\0\1\20\1\21\1\0\1\22\1\23\1\24"+
+    "\1\25\1\26\1\0\1\27\1\30\1\31\1\32\1\33"+
+    "\2\0\1\34\1\0\1\3\1\1\1\3\u0182\0";
 
   private static int [] zzUnpackcmap_blocks() {
     int [] result = new int[512];
@@ -89,10 +95,11 @@ public class AnalizadorLexico {
   private static final int [] ZZ_ACTION = zzUnpackAction();
 
   private static final String ZZ_ACTION_PACKED_0 =
-    "\1\0\1\1\1\2";
+    "\1\0\1\1\1\2\1\3\14\1\7\0\1\4\31\0"+
+    "\1\5\15\0\1\6\21\0\1\7";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[3];
+    int [] result = new int[82];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -117,10 +124,20 @@ public class AnalizadorLexico {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\2\0\2";
+    "\0\0\0\35\0\35\0\35\0\72\0\127\0\164\0\221"+
+    "\0\256\0\313\0\350\0\u0105\0\u0122\0\u013f\0\u015c\0\u0179"+
+    "\0\u0196\0\u01b3\0\u01d0\0\u01ed\0\u020a\0\u0227\0\u0244\0\35"+
+    "\0\u0261\0\u027e\0\u029b\0\u02b8\0\u02d5\0\u02f2\0\u030f\0\u032c"+
+    "\0\u0349\0\u0366\0\u0383\0\u03a0\0\u03bd\0\u03da\0\u03f7\0\u0414"+
+    "\0\u0431\0\u044e\0\u046b\0\u0488\0\u04a5\0\u04c2\0\u04df\0\u04fc"+
+    "\0\u0519\0\35\0\u0536\0\u0553\0\u0570\0\u058d\0\u05aa\0\u05c7"+
+    "\0\u05e4\0\u0601\0\u061e\0\u063b\0\u0658\0\u0675\0\u0692\0\35"+
+    "\0\u06af\0\u06cc\0\u06e9\0\u0706\0\u0723\0\u0740\0\u075d\0\u077a"+
+    "\0\u0797\0\u07b4\0\u07d1\0\u07ee\0\u080b\0\u0828\0\u0845\0\u0862"+
+    "\0\u087f\0\35";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[3];
+    int [] result = new int[82];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -143,10 +160,32 @@ public class AnalizadorLexico {
   private static final int [] ZZ_TRANS = zzUnpacktrans();
 
   private static final String ZZ_TRANS_PACKED_0 =
-    "\1\2\1\3\2\0";
+    "\1\2\2\3\1\4\1\5\2\2\1\6\1\7\1\10"+
+    "\1\2\1\11\4\2\1\12\2\2\1\13\1\2\1\14"+
+    "\1\15\1\2\1\16\1\17\1\2\1\20\1\2\56\0"+
+    "\1\21\42\0\1\22\22\0\1\23\13\0\1\24\2\0"+
+    "\1\25\27\0\1\26\27\0\1\27\30\0\1\30\27\0"+
+    "\1\31\55\0\1\32\31\0\1\33\2\0\1\34\33\0"+
+    "\1\35\32\0\1\36\32\0\1\37\24\0\1\40\37\0"+
+    "\1\41\33\0\1\42\44\0\1\43\35\0\1\44\23\0"+
+    "\1\45\26\0\1\46\43\0\1\47\45\0\1\30\23\0"+
+    "\1\50\26\0\1\51\33\0\1\52\55\0\1\53\22\0"+
+    "\1\54\37\0\1\55\34\0\1\56\43\0\1\57\22\0"+
+    "\1\60\45\0\1\61\33\0\1\62\34\0\1\63\30\0"+
+    "\1\30\34\0\1\64\32\0\1\65\43\0\1\65\20\0"+
+    "\1\30\33\0\1\30\46\0\1\66\23\0\1\67\43\0"+
+    "\1\70\34\0\1\71\25\0\1\72\47\0\1\30\35\0"+
+    "\1\73\23\0\1\74\36\0\1\75\41\0\1\76\21\0"+
+    "\1\77\37\0\1\100\40\0\1\30\33\0\1\47\25\0"+
+    "\1\30\46\0\1\101\11\0\1\102\57\0\1\103\15\0"+
+    "\1\104\32\0\1\105\32\0\1\106\37\0\1\62\50\0"+
+    "\1\107\30\0\1\105\34\0\1\110\42\0\1\111\37\0"+
+    "\1\112\30\0\1\113\37\0\1\114\11\0\1\115\46\0"+
+    "\1\116\35\0\1\117\21\0\1\120\40\0\1\121\33\0"+
+    "\1\122\27\0";
 
   private static int [] zzUnpacktrans() {
-    int [] result = new int[4];
+    int [] result = new int[2204];
     int offset = 0;
     offset = zzUnpacktrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -189,10 +228,11 @@ public class AnalizadorLexico {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\0\2\11";
+    "\1\0\3\11\14\1\7\0\1\11\31\0\1\11\15\0"+
+    "\1\11\21\0\1\11";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[3];
+    int [] result = new int[82];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -274,7 +314,7 @@ public class AnalizadorLexico {
    *
    * @param   in  the java.io.Reader to read input from.
    */
-  public AnalizadorLexico(java.io.Reader in) {
+  public AnalizadorLexicoTarea(java.io.Reader in) {
     this.zzReader = in;
   }
 
@@ -685,14 +725,47 @@ public class AnalizadorLexico {
             { System.out.print(yytext());
             }
           // fall through
-          case 3: break;
+          case 8: break;
           case 2:
-            { System.out.println(" Lexema: " + yytext()
-                         + " Columna: " + yychar
-                         + " fila: " + yyline);
+            { 
             }
           // fall through
-          case 4: break;
+          case 9: break;
+          case 3:
+            { System.out.println(" signo: " + yytext()
+                                     + " Columna: " + yychar
+                                     + " fila: " + yyline);
+            }
+          // fall through
+          case 10: break;
+          case 4:
+            { System.out.println(" palabra clave: " + yytext()
+                                     + " Columna: " + yychar
+                                     + " fila: " + yyline);
+            }
+          // fall through
+          case 11: break;
+          case 5:
+            { System.out.println(" identificador: " + yytext()
+                                     + " Columna: " + yychar
+                                     + " fila: " + yyline);
+            }
+          // fall through
+          case 12: break;
+          case 6:
+            { System.out.println(" Tipo de dato: " + yytext()
+                                     + " Columna: " + yychar
+                                     + " fila: " + yyline);
+            }
+          // fall through
+          case 13: break;
+          case 7:
+            { System.out.println(" literal: " + yytext()
+                                     + " Columna: " + yychar
+                                     + " fila: " + yyline);
+            }
+          // fall through
+          case 14: break;
           default:
             zzScanError(ZZ_NO_MATCH);
         }
@@ -711,7 +784,7 @@ public class AnalizadorLexico {
    */
   public static void main(String[] argv) {
     if (argv.length == 0) {
-      System.out.println("Usage : java AnalizadorLexico [ --encoding <name> ] <inputfile(s)>");
+      System.out.println("Usage : java AnalizadorLexicoTarea [ --encoding <name> ] <inputfile(s)>");
     }
     else {
       int firstFilePos = 0;
@@ -728,13 +801,13 @@ public class AnalizadorLexico {
         }
       }
       for (int i = firstFilePos; i < argv.length; i++) {
-        AnalizadorLexico scanner = null;
+        AnalizadorLexicoTarea scanner = null;
         java.io.FileInputStream stream = null;
         java.io.Reader reader = null;
         try {
           stream = new java.io.FileInputStream(argv[i]);
           reader = new java.io.InputStreamReader(stream, encodingName);
-          scanner = new AnalizadorLexico(reader);
+          scanner = new AnalizadorLexicoTarea(reader);
           while ( !scanner.zzAtEOF ) scanner.yylex();
         }
         catch (java.io.FileNotFoundException e) {
